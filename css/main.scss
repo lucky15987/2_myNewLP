@@ -95,6 +95,8 @@ section.hero {
     color: white;
     text-shadow: 1px 1px black;
     height: 90vh;
+    animation: moveDown 1s ease-in-out forwards;
+    opacity: 0;
 
     .down-arrow {
         stroke: white;
@@ -266,3 +268,12 @@ section.hero {
     }
 }
 
+@keyframes  moveDown{
+    from {
+        transform: translateY(-100px);
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
