@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
 body {
-    background: black;
+    //background: black;
     margin: 1.5em;
     font-family: 'Poppins', sans-serif;
     
@@ -92,6 +92,7 @@ h1 {
 
 section.hero {
     color: black;
+    text-shadow: 2px 2px white;
     height: 90vh;
 
     .down-arrow {
@@ -111,6 +112,14 @@ section.hero {
         width: 100%;
         object-fit: cover;
         height: 11em;
-        
+
+    }
+
+    .titles {
+        font-weight: bold;
+        font-size: 1.25rem;
+    }
+    .desc {
+        line-height: 1.5rem;
     }
 }
