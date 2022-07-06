@@ -51,7 +51,7 @@ nav {
         margin-top: 8em;
 
         a {
-            color: white;
+            color: black;
             padding: .75em 2em;
             display: block;
             
@@ -63,9 +63,13 @@ nav {
     }
 
     .close {
+        position: absolute;
+        top: 0;
+        right: 0;
         float: right;
         margin: 2em;
         width: 2.5em;
+        
     }
 }
 
@@ -127,6 +131,10 @@ section.hero {
     .desc {
         line-height: 1.5rem;
     }
+}
+
+.open-nav {
+    transform: translateX(0);
 }
 
 @media only screen and (min-width: 680px) {
