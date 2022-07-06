@@ -20,6 +20,8 @@ a {
   width: 100%;
   height: 100vh;
   z-index: -1;
+  -webkit-animation: introLoad 2s forwards;
+          animation: introLoad 2s forwards;
 }
 
 .logo {
@@ -84,10 +86,12 @@ section.hero {
   height: 90vh;
 }
 section.hero .down-arrow {
-  stroke: black;
+  stroke: white;
   position: absolute;
-  bottom: 2em;
-  width: 1em;
+  bottom: 5em;
+  width: 5em;
+  height: 5em;
+  animation: moveArrow 1s alternate-reverse infinite;
 }
 section.hero .down-arrow path {
   fill: white;
@@ -205,5 +209,41 @@ section.hero .down-arrow path {
 
   .feature {
     gap: 0;
+  }
+}
+@-webkit-keyframes introLoad {
+  from {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  to {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+@keyframes introLoad {
+  from {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  to {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+@-webkit-keyframes moveArrow {
+  from {
+    transform: translateY(-30px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes moveArrow {
+  from {
+    transform: translateY(-30px);
+  }
+  to {
+    transform: translateY(0);
   }
 }/*# sourceMappingURL=main.css.map */

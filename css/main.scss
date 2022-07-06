@@ -23,6 +23,7 @@ a {
     width: 100%;
     height: 100vh;
     z-index: -1;
+    animation: introLoad 2s forwards;
     //overflow: hidden;
 }
 
@@ -96,10 +97,12 @@ section.hero {
     height: 90vh;
 
     .down-arrow {
-        stroke: black;
+        stroke: white;
         position: absolute;
-        bottom: 2em;
-        width: 1em;
+        bottom: 5em;
+        width: 5em;
+        height: 5em;
+        animation: moveArrow 1s alternate-reverse infinite;
         
         path {
             fill: white;
@@ -246,4 +249,20 @@ section.hero {
     }
 }
 
+@keyframes introLoad {
+    from {
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    to {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+}
+@keyframes  moveArrow{
+    from {
+        transform: translateY(-30px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
 
