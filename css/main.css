@@ -47,7 +47,7 @@ nav ul {
   margin-top: 8em;
 }
 nav ul a {
-  color: black;
+  color: white;
   padding: 0.75em 2em;
   display: block;
 }
@@ -55,9 +55,9 @@ nav ul a:hover {
   background: rgb(235, 235, 235);
 }
 nav .close {
-  position: absolute;
-  top: 0;
-  right: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
   float: right;
   margin: 2em;
   width: 2.5em;
@@ -115,10 +115,6 @@ section.hero .down-arrow path {
 }
 .more-info .desc {
   line-height: 1.5rem;
-}
-
-.open-nav {
-  transform: translateX(0);
 }
 
 @media only screen and (min-width: 680px) {
@@ -257,21 +253,10 @@ section.hero .down-arrow path {
     transform: translateY(0);
   }
 }
-@-webkit-keyframes moveDown {
-  from {
-    transform: translateY(-100px);
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
+keyframes moveDown from {
+  transform: translateY(-100px);
 }
-@keyframes moveDown {
-  from {
-    transform: translateY(-100px);
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
+keyframes moveDown to {
+  transform: translateY(0);
+  opacity: 1;
 }/*# sourceMappingURL=main.css.map */
