@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
 body {
+    background: black;
     margin: 1.5em;
     font-family: 'Poppins', sans-serif;
     
@@ -26,13 +27,45 @@ a {
 }
 
 .logo {
-    color: white;
+    color: black;
     font-weight: bold;
 
 }
 
 nav {
-    display: none;
+    position: fixed;
+    right: 0;
+    top: 0;
+    background: white;
+    height: 100vh;
+    width: 50%;
+    z-index: 2;
+    text-transform: uppercase;
+    transform: translatex(100%);
+    transition: transform .5s ease-in-out;
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin-top: 8em;
+
+        a {
+            color: black;
+            padding: .75em 2em;
+            display: block;
+            
+            
+            &:hover {
+                background: rgb(235, 235, 235);
+            }
+        }
+    }
+
+    .close {
+        float: right;
+        margin: 2em;
+        width: 2.5em;
+    }
 }
 
 header {
@@ -46,15 +79,38 @@ header {
     }
 }
 
+h1 {
+    font-size: 3rem;
+    margin-top: 2em;
+    line-height: 3.3rem;
+}
+
+.subhead {
+    font-size: 1.4rem;
+
+}
+
 section.hero {
-    color: white;
+    color: black;
     height: 90vh;
 
-    svg {
-        stroke: white;
+    .down-arrow {
+        stroke: black;
+        position: absolute;
+        bottom: 2em;
+        width: 1em;
         
         path {
             fill: white;
         }
+    }
+}
+
+.more-info {
+    img {
+        width: 100%;
+        object-fit: cover;
+        height: 11em;
+        
     }
 }
